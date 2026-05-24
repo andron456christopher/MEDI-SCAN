@@ -5,6 +5,7 @@ NLP + Machine Learning + Deep Learning
 
 import os
 import re
+import sys
 import numpy as np
 import pandas as pd
 from flask import Flask, request, jsonify, render_template
@@ -19,9 +20,10 @@ from sklearn.metrics import (accuracy_score, precision_score,
                              recall_score, f1_score)
 from sklearn.preprocessing import LabelEncoder
 
-# Load environment variables
-load_dotenv()
-
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8")
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 
