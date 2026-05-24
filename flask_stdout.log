@@ -1,0 +1,25 @@
+✅ Loaded 4920 training rows | 132 symptoms | 41 diseases
+   Descriptions: 41 | Precautions: 41 | Severity scores: 131
+✅ TF-IDF matrix: (4920, 486)
+✅ Split — Train: 3936 | Test: 984
+
+⏳ Training models (may take 2-3 minutes) …
+   [1/5] ✅ Logistic Regression
+   [2/5] ✅ Random Forest (200 trees)
+   [3/5] ✅ AdaBoost (150 estimators)
+   [4/5] ✅ SVM (linear kernel)
+   [5/5] ✅ ANN — Neural Network (256→128→64)
+
+✅ All 5 models trained successfully!
+
+────────────────────────────────────────────────────────────────────
+Model                       Accuracy Precision    Recall        F1
+────────────────────────────────────────────────────────────────────
+Logistic Regression           100.0%    100.0%    100.0%    100.0%
+Random Forest                 100.0%    100.0%    100.0%    100.0%
+AdaBoost                       8.54%     7.38%     8.54%     6.63%
+SVM                           100.0%    100.0%    100.0%    100.0%
+ANN (Neural Network)          100.0%    100.0%    100.0%    100.0%
+────────────────────────────────────────────────────────────────────
+ * Serving Flask app 'app'
+ * Debug mode: on

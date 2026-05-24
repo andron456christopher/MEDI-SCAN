@@ -2,3 +2,10 @@ WARNING: This is a development server. Do not use it in a production deployment.
  * Running on http://127.0.0.1:5000
 Press CTRL+C to quit
  * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 133-804-256
+127.0.0.1 - - [25/May/2026 00:32:12] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [25/May/2026 00:32:23] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [25/May/2026 00:32:23] "GET /symptoms HTTP/1.1" 200 -
+127.0.0.1 - - [25/May/2026 00:32:23] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [25/May/2026 00:32:30] "POST /predict HTTP/1.1" 200 -
