@@ -3,21 +3,21 @@ MediScan — Advanced AI Healthcare Chatbot
 NLP + Machine Learning + Deep Learning
 """
 
-from sklearn.preprocessing import LabelEncoder
-from sklearn.metrics import (accuracy_score, precision_score,
-                             recall_score, f1_score)
-from sklearn.model_selection import train_test_split
-from sklearn.neural_network import MLPClassifier
-from sklearn.svm import SVC
-from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier
-from sklearn.linear_model import LogisticRegression
-from sklearn.feature_extraction.text import TfidfVectorizer
-from flask import Flask, request, jsonify, render_template
-import pandas as pd
-import numpy as np
 import os
 import re
-from dotenv import load_dotenv
+import numpy as np
+import pandas as pd
+from flask import Flask, request, jsonify, render_template
+
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.linear_model import LogisticRegression
+from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier
+from sklearn.svm import SVC
+from sklearn.neural_network import MLPClassifier
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import (accuracy_score, precision_score,
+                             recall_score, f1_score)
+from sklearn.preprocessing import LabelEncoder
 
 # Load environment variables
 load_dotenv()
@@ -342,6 +342,4 @@ def symptoms():
 
 
 if __name__ == "__main__":
-    debug_mode = os.getenv("FLASK_DEBUG", "False") == "True"
-    port = int(os.getenv("PORT", 5000))
-    app.run(debug=debug_mode, port=port)
+    app.run(debug=True, port=5000)
